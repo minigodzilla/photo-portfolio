@@ -1,0 +1,169 @@
+body
+{
+	background-color: $white;
+	background-image: url('/assets/img/bg-paper.png');
+	background-position: 50% 50%;
+	font-family: 'helvetica neue',sans-serif;
+}
+
+.highlight-text
+{
+	color: #930;
+}
+
+// input styles
+
+
+.btn
+{
+	display: inline-block;
+	height: 3rem;
+	line-height: 3rem;
+	padding: 0 2rem;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: $brand-color;
+	color: $white;
+}
+
+header
+{
+	height: 15vh;
+	min-height: 100px;
+
+	h1
+	{
+		margin-bottom: 20px;
+		font-family: Podkova,sans-serif;
+		font-size: 24px;
+		font-weight: 400;
+		color: #666;
+
+	}
+}
+
+.main
+{
+	font-size: 14px;
+	font-weight: 400;
+	text-align: justify;
+
+	.owl-carousel
+	{
+		margin-bottom: 40px;
+
+		.item
+		{
+			height: 70vh;
+			min-height: 460px;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+
+		.owl-nav button
+		{
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: block;
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+			width: 40px;
+			height: 40px;
+			color: $white;
+			outline: none !important;
+			opacity: 0.15;
+			transition: opacity 200ms ease;
+
+			&:hover
+			{
+				opacity: 0.2;
+				transition: opacity 200ms ease;
+			}
+
+			&:active
+			{
+				opacity: 0.3;
+				transition: opacity 50ms ease;
+			}
+
+			&.owl-prev
+			{
+				left: -30px;
+				background-image: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><path d='M0 30c0 16.569 13.431 30 30 30s30-13.431 30-30S46.569 0 30 0 0 13.431 0 30zm22.002 0c0-.208.08-.393.24-.553L33.449 18.24c.16-.16.345-.24.553-.24s.393.08.553.24l1.202 1.202c.16.16.24.345.24.553s-.08.393-.24.553L26.307 30l9.451 9.451c.16.16.24.345.24.553 0 .208-.08.393-.24.553l-1.202 1.202c-.161.161-.346.241-.554.241s-.393-.08-.553-.24L22.242 30.553a.761.761 0 0 1-.24-.553z'/></svg>");
+			}
+
+			&.owl-next
+			{
+				right: -30px;
+				background-image: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><path d='M30 0C13.431 0 0 13.431 0 30s13.431 30 30 30 30-13.431 30-30S46.569 0 30 0zm7.758 30.553L26.551 41.76c-.16.16-.345.24-.553.24s-.393-.08-.553-.24l-1.202-1.202a.761.761 0 0 1-.24-.553c0-.208.08-.393.24-.553L33.693 30l-9.451-9.451c-.16-.16-.24-.345-.24-.553s.08-.393.24-.553l1.202-1.202c.16-.16.345-.24.553-.24s.393.08.553.24l11.206 11.206a.761.761 0 0 1 .002 1.106z'/></svg>");
+			}
+		}
+
+		.owl-dots
+		{
+			position: absolute;
+			right: 0;
+			bottom: -30px;
+			left: 0;
+			display: flex;
+			justify-content: center;
+
+			.owl-dot
+			{
+				width: 10px;
+				height: 10px;
+				margin: 0 3px;
+				background-color: $black;
+				border-radius: 50%;
+				opacity: 0.15;
+
+				&.active
+				{
+					opacity: 0.3;
+				}
+			}
+		}
+	}
+
+	h2
+	{
+		font-family: Podkova,sans-serif;
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 0.9;
+		color: #666;
+		margin-bottom: 2rem;
+	}
+}
+
+footer
+{
+	height: 15vh;
+	min-height: 100px;
+}
+
+@include media-breakpoint-up(xl)
+{
+	header
+	{
+		h1
+		{
+			font-size: 32px;
+		}
+	}
+	.main
+	{
+		font-size: 18px;
+
+		h2
+		{
+			font-size: 60px;
+		}
+	}
+}
+
