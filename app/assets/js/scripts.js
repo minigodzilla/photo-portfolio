@@ -4,7 +4,7 @@
  * 
  * @author Steve Diabo
  * @version 1.0.0
- * Copyright 2018.  licensed.
+ * Copyright 2019.  licensed.
  */
 //----------------------------------------------------------------------------//
 // Owl Carousel                                                               //
