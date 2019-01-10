@@ -18,21 +18,25 @@ function initCarousel()
 		responsive: {
 			0: {
 				items: 1,
-				margin: 0
+				margin: 0,
+				loop: true
 			},
 			576: {
 				items: 1,
-				margin: 0
+				margin: 0,
+				loop: true
 			},
 			768: {
 				items: 1,
 				margin: 24,
-				nav: true
+				nav: true,
+				loop: true
 			},
 			1200: {
 				items: 1,
 				margin: 32,
-				nav: true
+				nav: true,
+				loop: true
 			}
 		}
 	});
