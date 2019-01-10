@@ -135,10 +135,73 @@ header
 		font-family: Podkova,sans-serif;
 		font-size: 48px;
 		font-weight: 400;
-		line-height: 0.9;
+		line-height: 1;
 		color: #666;
 		margin-bottom: 2rem;
 		text-align: left;
+	}
+	.signature
+	{
+		width: 8rem;
+	}
+
+	.offer
+	{
+		background-image: linear-gradient(rgba(0,27,76,0.6),rgba(0,27,76,0.6)), url('/assets/img/2.jpg');
+		background-position: 50% 50%;
+		background-size: cover;
+		position: relative;
+		margin-bottom: 2rem;
+		color: $white;
+		text-align: center;
+		padding: 1.75rem 2rem;
+		font-family: Podkova,sans-serif;
+		line-height: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&::before
+		{
+			content: '';
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			bottom: 1rem;
+			left: 1rem;
+			border: 2px dashed rgba(255,255,255,0.8);
+		}
+
+		.shoot-edit
+		{
+			font-weight: 800;
+			font-size: 22px;
+			letter-spacing: 0.5px;
+		}
+
+		.price
+		{
+			font-weight: 700;
+			font-size: 64px;
+			position: relative;
+			margin-left: 20px;
+
+			.dollar
+			{
+				position: absolute;
+				font-size: 32px;
+				top: 6px;
+				left: -20px;
+			}
+		}
+
+		.limited-time
+		{
+			font-weight: 400;
+			font-size: 18px;
+			letter-spacing: 0.5px;
+		}
 	}
 }
 
