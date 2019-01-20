@@ -11,6 +11,16 @@ body
 	color: #930;
 }
 
+select
+{
+	appearance: none;
+	color: red;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 10'><path fill='rgba(0,0,0,0.5)' d='M5.5 10L0 0 11 0z'/></svg>");
+	background-size: 11px 10px;
+	background-repeat: no-repeat;
+	background-position: 96% 50%;
+}
+
 // input styles
 
 
@@ -31,34 +41,32 @@ body
 
 header
 {
-	height: 15vh;
-	min-height: 100px;
+	padding-top: 2rem;
 
 	h1
 	{
 		margin-bottom: 20px;
 		font-family: Podkova,sans-serif;
-		font-size: 24px;
+		font-size: 22px;
 		font-weight: 400;
-		color: #666;
-
+		color: #777;
 	}
 }
 
 .main
 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
-	text-align: justify;
 
 	.owl-carousel
 	{
 		margin-bottom: 40px;
+		padding-left: 0;
+		padding-right: 0;
 
 		.item
 		{
-			height: 70vh;
-			min-height: 460px;
+			height: 250px;
 			background-position: 50% 50%;
 			background-size: cover;
 		}
@@ -71,9 +79,9 @@ header
 			display: block;
 			position: absolute;
 			top: 50%;
-			margin-top: -30px;
-			width: 40px;
-			height: 40px;
+			margin-top: -15px;
+			width: 30px;
+			height: 30px;
 			color: $white;
 			outline: none !important;
 			opacity: 0.15;
@@ -93,13 +101,13 @@ header
 
 			&.owl-prev
 			{
-				left: -30px;
+				left: -12px;
 				background-image: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><path d='M0 30c0 16.569 13.431 30 30 30s30-13.431 30-30S46.569 0 30 0 0 13.431 0 30zm22.002 0c0-.208.08-.393.24-.553L33.449 18.24c.16-.16.345-.24.553-.24s.393.08.553.24l1.202 1.202c.16.16.24.345.24.553s-.08.393-.24.553L26.307 30l9.451 9.451c.16.16.24.345.24.553 0 .208-.08.393-.24.553l-1.202 1.202c-.161.161-.346.241-.554.241s-.393-.08-.553-.24L22.242 30.553a.761.761 0 0 1-.24-.553z'/></svg>");
 			}
 
 			&.owl-next
 			{
-				right: -30px;
+				right: -12px;
 				background-image: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><path d='M30 0C13.431 0 0 13.431 0 30s13.431 30 30 30 30-13.431 30-30S46.569 0 30 0zm7.758 30.553L26.551 41.76c-.16.16-.345.24-.553.24s-.393-.08-.553-.24l-1.202-1.202a.761.761 0 0 1-.24-.553c0-.208.08-.393.24-.553L33.693 30l-9.451-9.451c-.16-.16-.24-.345-.24-.553s.08-.393.24-.553l1.202-1.202c.16-.16.345-.24.553-.24s.393.08.553.24l11.206 11.206a.761.761 0 0 1 .002 1.106z'/></svg>");
 			}
 		}
@@ -133,13 +141,14 @@ header
 	h2
 	{
 		font-family: Podkova,sans-serif;
-		font-size: 48px;
+		font-size: 36px;
 		font-weight: 400;
 		line-height: 1;
-		color: #666;
+		color: #777;
 		margin-bottom: 2rem;
 		text-align: left;
 	}
+
 	.signature
 	{
 		width: 8rem;
@@ -147,7 +156,7 @@ header
 
 	.offer
 	{
-		background-image: linear-gradient(rgba(0,27,76,0.6),rgba(0,27,76,0.6)), url('/assets/img/2.jpg');
+		background-image: linear-gradient(rgba(0,27,76,0.6),rgba(0,27,76,0.6)), url('../img/2.jpg');
 		background-position: 50% 50%;
 		background-size: cover;
 		position: relative;
@@ -175,7 +184,7 @@ header
 
 		.shoot-edit
 		{
-			font-weight: 800;
+			font-weight: 700;
 			font-size: 22px;
 			letter-spacing: 0.5px;
 		}
@@ -207,8 +216,95 @@ header
 
 footer
 {
-	height: 15vh;
-	min-height: 100px;
+	height: 30px;
+}
+
+@include media-breakpoint-up(sm)
+{
+	.main
+	{
+		.owl-carousel
+		{
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+}
+
+@include media-breakpoint-up(md)
+{
+	header
+	{
+		 padding-top: 3rem;
+
+		h1
+		{
+			font-size: 30px;
+		}
+	}
+
+	.main
+	{
+		.owl-carousel
+		{
+			.item
+			{
+				height: 420px;
+			}
+		}
+
+		h2
+		{
+			font-size: 48px;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg)
+{
+	header
+	{
+		padding-top: 0;
+		height: 15vh;
+		min-height: 100px;
+	}
+
+	.main
+	{
+		font-size: 14px;
+		text-align: justify;
+
+		.owl-carousel
+		{
+			.item
+			{
+				height: 70vh;
+				min-height: 460px;
+			}
+
+			.owl-nav button
+			{
+				width: 40px;
+				height: 40px;
+				margin-top: -20px;
+
+				&.owl-prev
+				{
+					left: -30px;
+				}
+
+				&.owl-next
+				{
+					right: -30px;
+				}
+			}
+		}
+	}
+
+	footer
+	{
+		height: 60px;
+	}
 }
 
 @include media-breakpoint-up(xl)
@@ -217,7 +313,7 @@ footer
 	{
 		h1
 		{
-			font-size: 32px;
+			font-size: 36px;
 		}
 	}
 	.main
@@ -226,7 +322,7 @@ footer
 
 		h2
 		{
-			font-size: 60px;
+			font-size: 48px;
 		}
 	}
 }

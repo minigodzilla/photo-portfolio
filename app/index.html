@@ -11,16 +11,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#222222">
-    <link href='http://fonts.googleapis.com/css?family=Varela|Podkova:400' rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Varela|Podkova:400,700,800' rel="stylesheet" type="text/css">
 </head>
 <body>
 
-<header style="display: flex; justify-content: space-between; align-items: flex-end;">
-	<div class="container">
+<header class="d-flex">
+	<div class="container mt-auto">
 		<div class="row">
-			<div class="col-12" style="display: flex; justify-content: space-between; align-items: flex-end;">
+			<div class="col-12">
 				<h1><span class="highlight-text">stevediabo</span>.<span class="highlight-text">photo</span>/realestate</h1>
-				<!-- <div class="test">menu</div> -->
 			</div>
 		</div>
 	</div>
@@ -38,9 +37,8 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-8">
-				<h2>an <span class="highlight-text">affordable</span> way
-				<br class="hidden-md-down"/>to elevate your listings</h2>
+			<div class="col-12 col-lg-8 mt-4 mt-lg-0">
+				<h2>an <span class="highlight-text">affordable</span> way <br class="d-none d-md-block"/> to elevate your listings</h2>
 
 				<p>Thank you for stopping by!</p>
 
@@ -61,15 +59,15 @@
 				<p>Steve Diabo</p>
 
 			</div>
-			<div class="col-4">
+			<div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto mt-4 mt-lg-0">
 				<div class="offer">
 					<div class="shoot-edit">shoot + edit</div>
 					<div class="price"><span class="dollar">$</span>99</div>
 					<div class="limited-time">limited-time offer</div>
 				</div>
-				<form novalidate>
+				<form action="https://formspree.io/stevediabo@gmail.com" method="POST" novalidate>
 					<div class="form-group">
-						<input type="text" class="form-control text-field" placeholder="Your Name"/>
+						<input name="Name" type="text" class="form-control name-field" placeholder="Your Name"/>
 						<div class="invalid-feedback">
 							This field is mandatory.
 						</div>
@@ -79,16 +77,16 @@
 
 					</div>
 					<div class="form-group">
-						<input type="email" class="form-control email-field" placeholder="Your Email"/>
+						<input name="Email" type="email" class="form-control email-field" placeholder="Your Agency Email"/>
 						<div class="invalid-feedback">
-							Please enter a valid email address.
+							Please enter a valid agency email address.
 						</div>
 						<div class="valid-feedback">
 							Looks good!
 						</div>
 					</div>
 					<div class="form-group">
-						<input type="tel" class="form-control tel-field" placeholder="Your Telephone Number"/>
+						<input name="Phone" type="tel" class="form-control tel-field" placeholder="Your Telephone Number"/>
 						<div class="invalid-feedback">
 							Please give us your phone number.
 						</div>
@@ -97,9 +95,15 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control tel-field" placeholder="Your Region (Toronto/GTA)"/>
+						<!-- <input type="text" class="form-control tel-field" placeholder="Your Region (Toronto/GTA)"/> -->
+						<select name="Region" class="form-control region-field">
+							<option value="" disabled selected>Select your region</option>
+							<option>Toronto (Downtown)</option>
+							<option>Greater Toronto Area (GTA)</option>
+							<option>Outside Toronto</option>
+						</select>
 						<div class="invalid-feedback">
-							Please leave a message.
+							Please select your region.
 						</div>
 						<div class="valid-feedback">
 							Looks good!

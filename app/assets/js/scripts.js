@@ -94,13 +94,13 @@ $(function()
 $(function()
 {
 	const $form = $('form');
-	const $inputs = $form.find ('.text-field, .tel-field');
+	const $inputs = $form.find ('.name-field, .tel-field, .region-field');
 	const $email  = $form.find ('.email-field');
 
 
 	// on blur
 
-	$inputs.blur (function()
+	$inputs.change (function()
 	{
 		if ($(this).val())
 		{
@@ -113,7 +113,7 @@ $(function()
 		}
 	});
 
-	$email.blur (function()
+	$email.change (function()
 	{
 		var emailValue = $email.val();
 
@@ -130,8 +130,11 @@ $(function()
 
 	// on submit
 
-	$form.submit (function()
+	$form.submit (function(e)
 	{
+
+		var errorState = false;
+
 		$inputs.each (function()
 		{
 			if ($(this).val())
@@ -142,6 +145,7 @@ $(function()
 			else
 			{
 				$(this).removeClass('is-valid').addClass('is-invalid');
+				errorState = true;
 			}
 		});
 
@@ -154,10 +158,12 @@ $(function()
 		else
 		{
 			$email.removeClass('is-valid').addClass('is-invalid');
+			errorState = true;
 		}
 
-		// we don't actually submit the form in any case
-		return false;
+		if (errorState)
+			return false;
+
 	});
 
 });
