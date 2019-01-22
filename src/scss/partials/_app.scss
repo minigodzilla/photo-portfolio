@@ -1,7 +1,8 @@
 body
 {
 	background-color: $white;
-	background-image: url('../img/bg-paper.png');
+	background-image: url('../img/bg-paper@2x.png');
+	background-size: 128px 128px;
 	background-position: 50% 50%;
 	font-family: 'helvetica neue',sans-serif;
 }
